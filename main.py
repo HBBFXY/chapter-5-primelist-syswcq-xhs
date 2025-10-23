@@ -1,9 +1,7 @@
-# 在此文件中实现 PrimeList 函数
-
-def PrimeList(N):
-    """
-    返回小于 N 的所有质数，以空格分隔    
-    参数:    N - 正整数    
-    返回:    str - 包含所有小于 N 的质数的字符串，空格分隔
-    """
-    
+def isOdd(n):
+    # 先判断是否是整数（排除bool类型，因为bool是int的子类）
+    if isinstance(n, int) and not isinstance(n, bool):
+        # 是整数，再判断是否为奇数
+        return n % 2 != 0
+    # 非整数或其他情况，返回False
+    return False    
